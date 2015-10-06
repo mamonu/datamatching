@@ -19,7 +19,7 @@ ig = Graph.TupleList(data, weights=True)
 print ig.is_simple()
 
 part = louvain.find_partition(ig, method='Modularity', weight='weight')
-layout = ig.layout_fruchterman_reingold()
+layout = ig.layout_fruchterman_reingold(weights='weight')
 
 
 
